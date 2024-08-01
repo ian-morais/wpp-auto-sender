@@ -1,4 +1,5 @@
 *ini
+.venv
 cacauShowIDS.py
 contacts.txt
 indexTXTsender.py
