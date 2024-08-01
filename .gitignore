@@ -1,0 +1,12 @@
+*ini
+cacauShowIDS.py
+contacts.txt
+indexTXTsender.py
+imageSender.py
+message.txt
+tablesCacauShowIDs.py
+__build__
+__pycache__
+data
+dist
+build
