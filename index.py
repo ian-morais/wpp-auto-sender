@@ -13,14 +13,11 @@ driver.get('https://web.whatsapp.com/')
 input("Escaneie o QR Code, e pressione [ENTER] posteriormente.")
 wait5 = WebDriverWait(driver, 5)
 
-with open('/Users/somac/Google Drive/gmailDrive/T.I/_p/pythonProjects/wppAPInd/contacts.txt', 'r', encoding = "utf8") as c:
+with open('/contacts.txt', 'r', encoding = "utf8") as c:
     contacts = [contact.strip() for contact in c.readlines()]
 
 #region Messages
-mensagem1 = "Nós do Grupo SOMA PR desejamos à todos um Feliz Natal!"
-mensagem2 = "Comunicamos que estaremos em recesso no dia 16/12 até 04/01"
-mensagem3 = "Confira o nosso post no Instagram!"
-mensagem4 = "https://www.instagram.com/p/CXdxijygLRV"
+mensagem1 = "Each message in global variables"
 #endregion
 
 def findContact(contact):
@@ -49,24 +46,12 @@ def findContact(contact):
         messageField[1].send_keys(mensagem1)
         messageField[1].send_keys(Keys.SHIFT,Keys.ENTER)
         time.sleep(.5)
-
-        messageField[1].send_keys(mensagem2)
-        messageField[1].send_keys(Keys.SHIFT,Keys.ENTER)
-        messageField[1].send_keys(Keys.SHIFT,Keys.ENTER)
-        time.sleep(.5)
-
-        messageField[1].send_keys(mensagem3)
-        messageField[1].send_keys(Keys.SHIFT,Keys.ENTER)
-        time.sleep(.5)
-
-        messageField[1].send_keys(mensagem4)
-        time.sleep(.5)
         #endregion
 
         messageField[1].send_keys(Keys.ENTER)
         time.sleep(5)
     except:
-        print("Contato não encontrado! [" + contact + "]")
+        print("Contato não encontrado! [" + contact + "]") # Validating contact name
         pass
 
 for contact in contacts:
